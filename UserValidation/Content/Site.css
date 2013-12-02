@@ -262,12 +262,12 @@ div#title {
 
 #logindisplay a:link {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #logindisplay a:visited {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #logindisplay a:hover {

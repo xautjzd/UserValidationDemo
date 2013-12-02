@@ -25,7 +25,7 @@ namespace UserValidation.Models
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); // 移除复数表名的契约    
             modelBuilder.Conventions.Remove<IncludeMetadataConvention>();      // 防止黑幕交易 要不然每次都要访问 EdmMetadata这个表       
-            throw new UnintentionalCodeFirstException();
+            //throw new UnintentionalCodeFirstException();
         }
     }
 }
