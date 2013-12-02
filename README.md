@@ -20,3 +20,7 @@ UserValidationDemo
 * Unit Tests([NUnit](http://www.nunit.org/)) and object mock([Moq](http://code.google.com/p/moq/))
 * Bootstrap to decorate view pages
 
+## Reference
+
+1. https://github.com/iloire/ASP.NET-MVC-ACME-Invoicing--App
+2. https://github.com/mazhekin/MVC4CustomMembershipSolution
