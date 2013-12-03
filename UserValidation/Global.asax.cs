@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using UserValidation.Models;
+using Datatables.Mvc;
 
 namespace UserValidation
 {
@@ -32,6 +33,9 @@ namespace UserValidation
 
         protected void Application_Start()
         {
+            // In order to display DataTables
+            ModelBinders.Binders[typeof(DataTable)] = new DataTableModelBinder();
+
             if (System.Configuration.ConfigurationManager.AppSettings["DropDatabaseOnChange"] == "1")
             {
                 //Set initializer to populate data on database creation

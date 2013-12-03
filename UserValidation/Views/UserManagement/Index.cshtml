@@ -1,0 +1,25 @@
+﻿@*Reference: http://www.codeproject.com/Articles/155422/jQuery-DataTables-and-ASP-NET-MVC-Integration-Part*@
+
+<link href="@Url.Content("~/Content/dataTables.bootstra.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.dataTables.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/dataTables.bootstrap.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.dataTables.editable.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#demo').html('<table class="table" id="user" width="50%"></table>');
+        $('#user').dataTable({
+            "bServerSide": true,
+            "sAjaxSource": '@Url.Action("GetData", "UserManagement")',
+            "sDom": "<'row'<'col-xs-6'T><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>",
+            "aoColumns": [
+			    { "sTitle": "UserName" },
+			    { "sTitle": "DisplayName" },
+			    { "sTitle": "Password" },
+                { "sTitle": "Enabled" },
+			    { "sTitle": "Email", "sClass": "center" }
+		    ]
+        });
+    });
+</script>
+
+<div id="demo" style=" margin: 100px 0"></div>
